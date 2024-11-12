@@ -1,5 +1,5 @@
 // // Variáveis
-// // let nome = prompt("Qual o seu nome?");
+// // let nome = prompt(``Qual o seu nome?");
 
 // // if (nome === "Robson") {
 // //   console.log("Esse cara é muito lindo");
@@ -146,7 +146,27 @@ for (let t = 0; t < 10; t++) {
   console.log("Repetindo algo");
 }
 
-
 for (r = 10; r > 0; r = r - 1) {
   console.log(`O R está diminuindo ${r}`);
+}
+
+// 13 - Identação
+for (u = 0; u < 10; u++) {
+  if (u * 2 > 10) {
+    console.log(`Maior que 10! ${u}`);
+  } else {
+    if (u / 2 === 0) {
+      console.log("deu 0");
+    }
+  }
+}
+
+//14 - Break
+for (g = 20; g > 0; g--) {
+  console.log(`O valor de G é ${g}`);
+
+  if (g === 1) {
+    console.log("O g é 1!");
+    break;
+  }
 }
