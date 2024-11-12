@@ -170,3 +170,30 @@ for (g = 20; g > 0; g--) {
     break;
   }
 }
+
+// 15 - continue
+for (s = 0; s < 10; s = s + 1) {
+  // Operador resto = %
+  if (s % 2 === 0) {
+    console.log("Número Par", s);
+    continue;
+  }
+  console.log("Número impar", s);
+}
+
+// 16 - Switch
+const job = "Jonas";
+
+switch (job) {
+  case "Developer":
+    console.log("Você é um developer");
+    break;
+  case "Advogado":
+    console.log("Você é um advogado");
+    break;
+  case "Engenheiro":
+    console.log("Você é um engenheiro");
+    break;
+  default:
+    console.log("Vagabundo!")
+}
