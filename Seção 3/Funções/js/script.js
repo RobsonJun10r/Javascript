@@ -168,3 +168,60 @@ const copaLibertadores = (texto, campeao = 0) => {
 };
 
 copaLibertadores("O Cruzeiro foi campeão da libertadores", 2);
+
+// 9 - closure
+
+function someFunction() {
+  let txt = "Teste";
+
+  function display() {
+    console.log(txt);
+  }
+
+  display();
+}
+
+someFunction();
+
+//10 - Mais sobre closure
+const mutiplicationClosure = (n) => {
+  return (m) => {
+    return n * m;
+  };
+};
+
+const c1 = mutiplicationClosure(5)
+const c2 = mutiplicationClosure(10)
+
+console.log(c1)
+console.log(c2)
+
+console.log(c1(5))
+console.log(c2(10))
+
+//11 - Recursion
+
+const untilTen = (n, m) => {
+  if(n < 10){
+    console.log('A função parou de executar!')
+  } else {
+    const x = n - m
+
+    console.log(x)
+
+    untilTen(x, m)
+  }
+}
+
+untilTen(100, 7)
+
+function factorial(x) {
+  if(x === 0){
+    return 1
+  }
+  return x * factorial(x - 1)
+}
+
+const num = 3
+const resul = factorial(num)
+console.log(`O fatorial do número ${num} é ${resul}`)
