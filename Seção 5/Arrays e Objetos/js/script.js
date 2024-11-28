@@ -200,5 +200,31 @@ console.log(exibirDisponíveis);
 
 //21 - Repeat
 
-const palavra = "testando "
-console.log(palavra.repeat(5))
+const palavra = "testando ";
+console.log(palavra.repeat(5));
+
+//22 - Rest Operator
+
+const somaInfinita = (...args) => {
+  let total = 0;
+
+  for (let i = 0; i < args.length; i++) {
+    total += args[i];
+  }
+
+  return total;
+};
+
+console.log(somaInfinita(1238129038, 123123123, 13, 123, 134, 1321314));
+
+//23 - for...of
+
+const somaInfinita2 = (...args) => {
+  let total = 0;
+  for (num of args) {
+    total += num;
+  }
+  return total;
+};
+
+console.log(somaInfinita2(1,2))
