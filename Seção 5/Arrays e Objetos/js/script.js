@@ -227,4 +227,55 @@ const somaInfinita2 = (...args) => {
   return total;
 };
 
-console.log(somaInfinita2(1,2))
+console.log(somaInfinita2(1, 2));
+
+// 24 - Destruturing
+
+const userDetails = {
+  firstName: "Robson",
+  lastName: "Ribeiro Alves Junior",
+  job: "Programador",
+};
+
+const { firstName, lastName, job } = userDetails;
+console.log(firstName, lastName, job);
+
+// Renomear as variáveis
+const { firstName: primeiroNome } = userDetails;
+console.log(primeiroNome);
+
+// Destructuring Arrays
+const frutas1 = ["Banana", "Manga", "Melancia", "Maçã"];
+const [frutaA, frutaB, frutaC, frutaD] = frutas1;
+console.log(frutaA, frutaB, frutaC, frutaD);
+
+// JSON
+
+const myJSon =
+  '{"name": "Robson", "age": 21, "skills": ["PHP", "JavaScript", "Python"]}';
+// estrutura que recebemos o JSON
+// o jeito que está não serve de nada
+
+// json para objeto e objeto para json
+
+const myObject = JSON.parse(myJSon);
+console.log(myJSon);
+console.log(typeof myJSon);
+console.log(myObject.name);
+console.log(myObject.age);
+console.log(myObject.skills);
+// Desestruturei sozinho essa porra to aprendendo
+const { name: nome, age: idade, skills: habilidade } = myObject;
+console.log(nome);
+console.log(habilidade);
+
+//Json invalid
+const badJson = '{"name": Pedro, "age": 25}';
+// const myBadJson = JSON.parse(badJson)
+// console.log(myBadJson)
+
+myObject.isOpenToWork = true;
+console.log(myObject);
+const myNewJson = JSON.stringify(myObject);
+console.log(myNewJson);
+console.log(typeof myNewJson);
